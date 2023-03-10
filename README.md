@@ -1,5 +1,18 @@
 # Azure DNS Private Resolver topology options
 
+<!-- TOC -->
+
+- [Introduction](#introduction)
+- [Resolution options](#resolution-options)
+- [Architectural considerations](#architectural-considerations)
+    - [IP Network Connectivity](#ip-network-connectivity)
+    - [Query performance and scale](#query-performance-and-scale)
+    - [Implementation and migration](#implementation-and-migration)
+    - [Operational complexity and Azure Private DNS Zones integration](#operational-complexity-and-azure-private-dns-zones-integration)
+- [Conclusion](#conclusion)
+
+<!-- /TOC -->
+
 # Introduction 
 
 The Azure DNS Private Resolver service is injected into your Virtual Network and utilises network interfaces for two functions:
@@ -8,6 +21,8 @@ The Azure DNS Private Resolver service is injected into your Virtual Network and
 2)	**Outbound Endpoints** – a maximum of five – used to forward resolution requests to destinations within your internal private network (Azure or On-Premises), that cannot be resolved by Azure DNS Private Zones. How the outbound endpoint behaves in respect to forwarding, is dictated by the configuration of the associated DNS Forwarding Ruleset
 
 See “[What is Azure DNS Private Resolver?](https://learn.microsoft.com/en-us/azure/dns/dns-private-resolver-overview)” for full technical details and product overview.
+
+> Azure DNS Private Resolver Public Docs official limits - click [here](https://learn.microsoft.com/en-us/azure/dns/dns-faq#:~:text=limits%20are%20dropped.-,DNS%20private%20resolver,-1)
 
 # Resolution options
 
