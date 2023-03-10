@@ -81,3 +81,4 @@ We have shown that the Azure DNS Private Resolver service has two fundamental to
 The following table summarises the considerations discussed in this document.
 
 ![](images/2023-03-10-13-53-57.png)
+
