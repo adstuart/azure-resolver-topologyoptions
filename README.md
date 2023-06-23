@@ -86,6 +86,8 @@ Note. It is possible to simplify the integration of Azure DNS Private Zones for 
 
 ![](images/2023-03-10-10-01-29.png)
 
+> NB. In the above diagram, its important to note that the Ruleset is only linked to the Spoke VNets, not the Hub VNet, as this would cause resolution loops as per [official docs](https://learn.microsoft.com/en-us/azure/dns/private-resolver-endpoints-rulesets#:~:text=This%20configuration%20can%20cause%20DNS%20resolution%20loops). 
+
 # Conclusion
 
 We have shown that the Azure DNS Private Resolver service has two fundamental topology options for integration into your wider private DNS resolution design. 
